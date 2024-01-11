@@ -1,50 +1,51 @@
 @font-face {
-    font-family: "Gelasio";
-    src: url(assets/fonts/Gelasio-Regular.ttf) format("truetype");
+    font-family: 'Gelasio';
+    src: url(assets/fonts/Gelasio-Regular.ttf) format('truetype');
     font-style: normal;
     font-weight: normal;
-  }
-  
-  /*Normalize*/
-  * {
+}
+
+/*Normalize*/
+* {
     padding: 0;
     margin: 0;
     border: 0;
-  }
-  
-  *,
-  *:before,
-  *:after {
+}
+
+*,
+*:before,
+*:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  
-  :focus,
-  :active {
+}
+
+:focus,
+:active {
     outline: none;
-  }
-  
-  a:focus,
-  a:active {
+}
+
+a:focus,
+a:active {
     outline: none;
-  }
-  
-  nav,
-  footer,
-  header,
-  aside {
+}
+
+nav,
+footer,
+header,
+aside {
     display: block;
-  }
-  
-  html,
-  body {
+}
+
+html,
+body {
     height: 100%;
-    @media screen and (max-width:870px) {
-      height: auto;
+    @media screen and (max-width: 870px) {
+        height: auto;
     }
     width: 100%;
     font-size: 100%;
+    font-family: Gelasio;
     line-height: 1;
     font-size: 16px;
     -ms-text-size-adjust: 100%;
@@ -52,61 +53,99 @@
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     position: relative;
-  }
-  
-  
-  
-  input,
-  button,
-  textarea {
+}
+
+input,
+button,
+textarea {
     font-family: inherit;
-  }
-  
-  input::-ms-clear {
+}
+
+input::-ms-clear {
     display: none;
-  }
-  
-  button {
+}
+
+button {
     cursor: pointer;
-  }
-  
-  button::-moz-focus-inner {
+}
+
+button::-moz-focus-inner {
     padding: 0;
     border: 0;
-  }
-  
-  a,
-  a:visited {
+}
+
+a,
+a:visited {
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: none;
-  }
-  
-  ul li {
+}
+
+ul li {
     list-style: none;
-  }
-  
-  img {
+}
+
+img {
     vertical-align: top;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
     font-weight: 400;
-  }
-  
-  /*--------------------*/
-  
-  .bigred {
+}
+
+/*--------------------*/
+
+.bigred {
     font-size: 20px;
     color: red;
-  }
-  
-  /*Normalize*/
+}
+
+/*Normalize*/
+.main_container {
+}
+
+.header {
+}
+.main {
+}
+.game {
+}
+.hangman_block {
+}
+.gallows {
+}
+.head {
+}
+.body {
+}
+.hand-left {
+}
+.hand-right {
+}
+.leg-left {
+}
+.leg-right {
+}
+
+.words_block {
+}
+.word {
+}
+.hint {
+}
+.guesses {
+}
+.keyboard {
+}
+.footer {
+}
+.footer_item {
+}

@@ -1,0 +1,11 @@
+import "./assets/js/layout";
+import "./assets/js/words";
+import "./assets/js/game";
+import "./assets/icons/gallows.svg";
+import "./assets/icons/head.svg";
+import "./assets/icons/body.svg";
+import "./assets/icons/hand-one.svg";
+import "./assets/icons/hand-two.svg";
+import "./assets/icons/leg-one.svg";
+import "./assets/icons/leg-two.svg";
+import "./assets/fonts/Gelasio-Regular.ttf";

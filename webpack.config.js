@@ -35,14 +35,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|jpeg)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: path.join("assets", "images/[name][ext]"),
-        },
-      },
-      {
-        test: /\.png$/,
+        test: /\.(jpg|jpeg|svg|png)$/i,
         type: "asset/resource",
         generator: {
           filename: path.join("assets", "icons/[name][ext]"),
