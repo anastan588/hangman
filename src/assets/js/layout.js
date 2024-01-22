@@ -1,6 +1,14 @@
+import { head } from '../icons/partsHangman';
+import { body } from '../icons/partsHangman';
+import { leftHand } from '../icons/partsHangman';
+import { rightHand } from '../icons/partsHangman';
+import { leftLeg } from '../icons/partsHangman';
+import { rightLeg } from '../icons/partsHangman';
+
 document.body.insertAdjacentHTML(
-  "beforeend",
-  `<div class="main_container>
+    'beforeend',
+    `<div class="main_container">
+              <div class="overlay"></div>
               <header class="header">
                  <h1>Fruits Hangman</h1>
               </header>
@@ -8,12 +16,18 @@ document.body.insertAdjacentHTML(
                 <section class="game">
                   <div class="hangman_block">
                      <img class="gallows" src="assets/icons/gallows.svg" alt="gallows"/>
-                     <img class="head" src="assets/icons/head.svg" alt="head"/>
-                     <img class="body" src="assets/icons/body.svg" alt="body"/>
-                     <img class="hand-left" src="assets/icons/hand-one.svg" alt="hand-left"/>
-                     <img class="hand-right" src="assets/icons/hand-two.svg" alt="hand-right"/>
-                     <img class="leg-left" src="assets/icons/leg-one.svg" alt="leg-left"/>
-                     <img class="leg-right" src="assets/icons/leg-two.svg" alt="leg-right"/>
+                     <div class="hangman-image">
+                        <div class="head hangman_item">${head}</div>
+                        <div class="body-hands hangman_item">
+                            <div class="hand-left">${leftHand}</div>
+                            <div class="body">${body}</div>
+                            <div class="hand-right">${rightHand}</div>
+                        </div>
+                        <div class="legs hangman_item">
+                            <div class="leg-left">${leftLeg}</div>
+                            <div class="leg-right">${rightLeg}</div>
+                        </div>
+                     </div>
                   </div>
                   <div class="words_block">
                     <div class="word"></div>
@@ -24,17 +38,15 @@ document.body.insertAdjacentHTML(
                  </section>
               </main>
               <footer class="footer">
-                 <a class="footer_item">
+                 <p class="footer_item">
                    anastan588
-                 </a>
+                 </p>
                  <p class="footer_item">
                    2024
                  </p>
-                 <p class="footer_item">
+                 <a class="footer_item github" href="https://github.com/anastan588" target="_blank">
                    Github
-                 </p>
+                 </a>
               </footer>
-            </div>`,
+            </div>`
 );
-
-console.log("hello");

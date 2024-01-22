@@ -40,9 +40,7 @@ aside {
 html,
 body {
     height: 100%;
-    @media screen and (max-width: 870px) {
-        height: auto;
-    }
+    min-height: 100vh;
     width: 100%;
     font-size: 100%;
     font-family: Gelasio;
@@ -109,26 +107,124 @@ h6 {
 }
 
 /*Normalize*/
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(41, 41, 41, 0.4);
+}
+
 .main_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // justify-content: center;
+    gap: 30px;
+    height: 100%;
+    position: relative;
 }
 
 .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    // font-weight: bold;
+    background-color: #ff8256;
+    color: white;
+    font-size: 200%;
+}
+@media screen and (max-width: 700px) {
+    .main_container {
+        gap: 10px;
+    }
+    .header {
+        font-size: 120%;
+    }
+}
+h1 {
+    // font-weight: bold;
 }
 .main {
+    flex: 1 1 auto;
+    background: url(assets/icons/apple.svg) bottom center no-repeat;
 }
 .game {
+    display: flex;
+    gap: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .game {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .game {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 .hangman_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+
 .gallows {
+    width: 100%;
+}
+
+.hangman-image {
+    position: absolute;
+    top: 20%;
+    right: -5%;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-height: 63%;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+    .gallows {
+        max-height: 450px;
+    }
+    .hangman-image {
+        right: 7%;
+    }
+}
+.hangman_item {
+    display: flex;
+    justify-content: center;
+    max-height: 35%;
 }
 .head {
+    width: 100%;
 }
+.body-hands {
+    display: flex;
+    width: 100%;
+}
+
 .body {
 }
 .hand-left {
 }
 .hand-right {
+}
+.legs {
+    display: flex;
+    padding-left: 3px;
+    width: 100%;
 }
 .leg-left {
 }
@@ -136,16 +232,133 @@ h6 {
 }
 
 .words_block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 5px;
+    max-width: 370px;
+    justify-content: center;
+}
+@media screen and (max-width: 700px) {
+    .words_block {
+        gap: 10px;
+    }
 }
 .word {
+    display: flex;
+    gap: 5px;
 }
 .hint {
+    text-align: center;
 }
 .guesses {
 }
 .keyboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex-wrap: wrap;
 }
 .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ff8256;
+    color: white;
+    font-size: 150%;
 }
 .footer_item {
+    padding: 10px;
+    // font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        font-size: 100%;
+    }
+}
+
+.letter_item {
+    border-bottom: 4px solid black;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+    .letter_item {
+        border-bottom: 3px solid black;
+        width: 25px;
+        height: 35px;
+    }
+}
+
+.github {
+    cursor: pointer;
+    color: white;
+}
+
+span {
+    font-weight: bold;
+}
+
+.number_guesses {
+    font-weight: bold;
+    color: red;
+}
+
+.letter_keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-color: #ff8256;
+    border-radius: 5px;
+    padding: 10px 13px 10px 13px;
+    cursor: pointer;
+}
+
+.letter_keyboard_used {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.modal-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #ff8256;
+    color: white;
+    padding: 10px;
+    border: outset 3px white;
+}
+.text-result {
+    font-weight: bold;
+}
+.text-word {
+}
+.text-suggestion {
+}
+.text-decision {
+    display: flex;
+    gap: 10px;
+}
+.text-button {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border: outset 3px white;
+    cursor: pointer;
 }
